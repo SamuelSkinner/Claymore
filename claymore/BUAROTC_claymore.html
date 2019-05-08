@@ -1,0 +1,26 @@
+<html>
+<head>
+    <script src = "/socket.io/socket.io.js" > </script>
+    <script>
+        var socket = io.connect();
+        function manual() {
+            socket.emit('method_choice', '0');
+        }
+        function motion() {
+            socket.emit('method_choice', '1');
+        }
+        function explode() {
+            socket.emit('explosion', '1');
+        }
+    </script>
+</head> 
+ 
+<body>
+    <h1 style="font-size:30pt;">Choose to trigger the claymore manually or with motion sensing:</h1>
+    <a href="" onClick="manual();" style="font-size:32pt;">Manual</a>
+    &nbsp;&nbsp;&nbsp;
+    <a href="" onClick="motion();" style="font-size:32pt;">Motion Sensing</a>
+    <h1 style="font-size:30pt;">Manual method:</h1>
+    <a href="" onClick="explode();" style="font-size:32pt;">TRIGGER</a>
+</body>
+</html>
